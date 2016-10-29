@@ -1,5 +1,5 @@
 FROM willnorris/imageproxy
 MAINTAINER Anon <a@anon.anon>
 
-CMD ["-cache", "/tmp/imageproxy"]
+ENTRYPOINT ["/go/bin/imageproxy", "-addr 0.0.0.0:80", "-cache", "/tmp/imageproxy"]
 EXPOSE 80
